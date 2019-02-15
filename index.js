@@ -12,8 +12,12 @@ const calc = (() => {
     hookCallback = callback;
   }
 
-  function createFromConfig(currVal) {
-    return new Calculator(currVal);
+  function isNumber(value) {
+    const isNum = Number.isInteger(value);
+    if (!isNum) {
+      throw new Error(`${value} is not a number, please provide an integer.`);
+    }
+    return isNum;
   }
 
   function setInitialValue(initVal) {
@@ -29,14 +33,6 @@ const calc = (() => {
       throw new Error(`A secondary value has already been set (${this.nextValue}). Try using reset().`);
     }
     this.nextValue = isNumber(value) ? value : null;
-  }
-
-  function isNumber(value) {
-    const isNumber = Number.isInteger(value);
-    if (!isNumber) {
-      throw new Error(`${value} is not a number, please provide an integer.`);
-    }
-    return isNumber;
   }
 
   function hasInitialValue() {
@@ -121,6 +117,10 @@ const calc = (() => {
     this.action = null;
   }
 
+  function createFromConfig(currVal) {
+    return new Calculator(currVal);
+  }
+
   const proto = Calculator.prototype;
 
   // public API's
@@ -129,6 +129,7 @@ const calc = (() => {
   proto.divide = divide;
   proto.reset = reset;
   proto.minus = minus;
+
 
   setHookCallback(createFromConfig);
 
