@@ -2,89 +2,56 @@
 
 A lightweight javascript library for parsing calculations as an example for the revealing module pattern and testing with Jasmine.
 
+
 ## Usage
 
-Once you've included this library in projects (See later **build** section), you will be able to use this library in a number of ways.
+In a browser using CDN:
+```
+<script src="https://unpkg.com/@perreh/js-calculator@1.0.4/dist/calc.bundle.js"></script>
 
-### Web Project
-Include in a HTML project
-```
-//if you have built the package yourself
-<script src='calc.bundle.js'></script>
-// or feel free to use the cdn
-<script src='https://unpkg.com/@perreh/js-calculator/dist/calc.bundle.js'></script>
-```
-The global variable `calc` will now be available to use.
-
-```
-calc(5).add(7)
+<script>
+    calc(3).add(5); //returns 8
+</script>
 ```
 
-### Javascript Project
-Include in a Javascript project
+Using npm:
 ```
-var calc = require('calc.bundle.js')
-```
-The variable `calc` will now be available to use.
-
-```
-calc(5).add(7)
+npm -i --save @perreh/js-calculator
 ```
 
-## Getting Started
+In Node.js
+```
+var calc = require('@perreh/js-calculator');
 
-To get started with this JS example either clone or fork the repository to get a copy of the source to start playing around with it.
+calc(3).add(5); //returns 8
+```
 
-### Prerequisites
+## Building
 
-First you will need to install [Node.js](https://nodejs.org/en/) (I'm using Node v9.11.1).
-
-* Install [Node.js](https://nodejs.org/en/)
-
-
-### Installing
-
-The Library is easy to install locally for development.
+Take a copy of the code if you want to make changes or build the bundle yourself. **eslint** is used in the build to test code against a style guide.
 
 ```
 git clone https://github.com/perryjsteward/js-calculator.git
 cd js-calculator
 npm install
+npm build
 ```
 
-To see if the library is working you can run the following command to see the results of a few examples.
+build will bundle the file into `/dist`
+
+## Testing
+
+Test the package using Jasmine against original index.js:
 
 ```
-npm run examples
+npm run test
 ```
 
-## Running the tests
-
-Jasmine is used to run BDD tests on the library. You can navigate to `spec` to see all the test files for the js-calculator library.
-
-
-```
-npm test
-```
-
-### Specific Tests
-
-The test files have been broken down into method and init files so you can run specific tests if you are working on particular functionality. `-- --` is NOT a typo.
+To test a specific spec file (`-- --` is not a typo):
 
 ```
 npm test -- --filter="Calculator Minus"
 ```
-
-
-## Build
-
-Building is made really easy by using webpack.
-
-```
-npm run build
-```
-You will now be able to find a bundled file in the `dist` directory. You can insert this into HTML or Javascript ready for use straight out the box.
-
 
 ## Authors
 

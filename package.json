@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "babel": "babel --presets es2015 ./index.js -o dist/calc.bundle.js",
-    "dev": "",
     "test": "jasmine",
     "examples": "node examples.js",
     "build": "webpack",
