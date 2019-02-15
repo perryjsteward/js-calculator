@@ -1,7 +1,7 @@
 const calc = (() => {
   let hookCallback;
 
-  const AVAILABLEACTIONS = ['MULTIPLY', 'ADD', 'MINUS', 'DIVIDE'];
+  const AVAILABLE_ACTIONS = ['MULTIPLY', 'ADD', 'MINUS', 'DIVIDE'];
 
   // used to allow users to pass in an initial integer i.e. calc(4).add(5)
   function setHookCallback(callback) {
@@ -54,7 +54,7 @@ const calc = (() => {
     if (!method) {
       throw new Error('An method is required for the calculator, please check the method to see if one has been passed');
     }
-    if (!AVAILABLEACTIONS.includes(method)) {
+    if (!AVAILABLE_ACTIONS.includes(method)) {
       throw new Error(`The method "${method}" is not in the list of available calculator actions.`);
     }
     this.method = method;
