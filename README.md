@@ -2,6 +2,32 @@
 
 A lightweight javascript library for parsing calculations as an example for the revealing module pattern and testing with Jasmine.
 
+## Usage
+
+Once you've included this library in projects (See later **build** section), you will be able to use this library in a number of ways.
+
+### Web Project
+Include in a HTML project
+```
+<script src='calc.bundle.js'></script>
+```
+The global variable `calc` will now be available to use.
+
+```
+calc(5).add(7)
+```
+
+### Javascript Project
+Include in a Javascript project
+```
+var calc = require('calc.bundle.js')
+```
+The variable `calc` will now be available to use.
+
+```
+calc(5).add(7)
+```
+
 ## Getting Started
 
 To get started with this JS example either clone or fork the repository to get a copy of the source to start playing around with it.
@@ -11,12 +37,6 @@ To get started with this JS example either clone or fork the repository to get a
 To get started with this library you will need to install [Node.js](https://nodejs.org/en/) (I'm using Node v9.11.1) and [Jasmine](https://jasmine.github.io/) for testing.
 
 * Install [Node.js](https://nodejs.org/en/)
-
-Once you have Node setup just use the package manager to install jasmine.
-
-```
-npm install -g jasmine
-```
 
 
 ### Installing
@@ -40,7 +60,6 @@ npm run examples
 Jasmine is used to run BDD tests on the library. You can navigate to `spec` to see all the test files for the js-calculator library.
 
 
-
 ```
 npm test
 ```
@@ -54,9 +73,14 @@ npm test -- --filter="Calculator Minus"
 ```
 
 
-## Deployment
+## Build
 
-TBC
+Building is made really easy by using webpack.
+
+```
+npm run build
+```
+You will now be able to find a bundled file in the `dist` directory. You can insert this into HTML or Javascript ready for use straight out the box.
 
 
 ## Authors
