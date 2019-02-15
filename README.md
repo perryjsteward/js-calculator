@@ -9,7 +9,10 @@ Once you've included this library in projects (See later **build** section), you
 ### Web Project
 Include in a HTML project
 ```
+//if you have built the package yourself
 <script src='calc.bundle.js'></script>
+// or feel free to use the cdn
+<script src='https://unpkg.com/@perreh/js-calculator/dist/calc.bundle.js'></script>
 ```
 The global variable `calc` will now be available to use.
 
