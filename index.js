@@ -20,6 +20,16 @@ const calc = (() => {
     return isNum;
   }
 
+  function hasInitialValue() {
+    const val = this.initialValue;
+    return val !== undefined && isNumber(val);
+  }
+
+  function hasNextValue() {
+    const val = this.nextValue;
+    return val !== undefined && isNumber(val);
+  }
+
   function setInitialValue(initVal) {
     const val = initVal === undefined || initVal === null ? 0 : initVal;
     if (hasInitialValue.call(this)) {
@@ -35,15 +45,6 @@ const calc = (() => {
     this.nextValue = isNumber(value) ? value : null;
   }
 
-  function hasInitialValue() {
-    const val = this.initialValue;
-    return val !== undefined && isNumber(val);
-  }
-
-  function hasNextValue() {
-    const val = this.nextValue;
-    return val !== undefined && isNumber(val);
-  }
 
   function hasExpressionValues() {
     const hasBothValues = hasInitialValue.call(this) && hasNextValue.call(this);
