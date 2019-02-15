@@ -34,7 +34,7 @@ To get started with this JS example either clone or fork the repository to get a
 
 ### Prerequisites
 
-To get started with this library you will need to install [Node.js](https://nodejs.org/en/) (I'm using Node v9.11.1) and [Jasmine](https://jasmine.github.io/) for testing.
+First you will need to install [Node.js](https://nodejs.org/en/) (I'm using Node v9.11.1).
 
 * Install [Node.js](https://nodejs.org/en/)
 
