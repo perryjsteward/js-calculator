@@ -8,6 +8,8 @@
     "dist"
   ],
   "scripts": {
+    "babel": "babel --presets es2015 ./index.js -o dist/calc.bundle.js",
+    "dev": "",
     "test": "jasmine",
     "examples": "node examples.js",
     "build": "webpack",
@@ -16,8 +18,19 @@
   "author": "Perry James Steward <perryjsteward@gmail.com> (https://github.com/perryjsteward)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
     "jasmine": "^3.3.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
   }
 }

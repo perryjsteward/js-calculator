@@ -1,4 +1,4 @@
-let calc = require('./index');
+let calc = require('./dist/calc.bundle.js');
 
 console.log(`Running js-calulator examples! \n\n`);
 console.log(`The result of calc(23).add(32) is: ${calc(23).add(32)} \n`);
