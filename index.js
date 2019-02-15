@@ -3,10 +3,6 @@ const calc = (() => {
 
   const AVAILABLEACTIONS = ['MULTIPLY', 'ADD', 'MINUS', 'DIVIDE'];
 
-  function hooks() {
-    return hookCallback(...arguments);
-  }
-
   // used to allow users to pass in an initial integer i.e. calc(4).add(5)
   function setHookCallback(callback) {
     hookCallback = callback;
@@ -134,7 +130,7 @@ const calc = (() => {
 
   setHookCallback(createFromConfig);
 
-  return hooks;
+  return hookCallback;
 })();
 
 module.exports = calc;
