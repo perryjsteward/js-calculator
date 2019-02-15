@@ -1,6 +1,6 @@
 {
   "name": "@perreh/js-calculator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Calculator Module for JS",
   "main": "dist/calc.bundle.js",
   "unpkg": "dist/calc.bundle.js",
