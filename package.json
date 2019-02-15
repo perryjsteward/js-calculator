@@ -1,0 +1,14 @@
+{
+  "name": "js-calculator",
+  "version": "1.0.0",
+  "description": "Calculator Module for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Perry James Steward <perryjsteward@gmail.com> (https://github.com/perryjsteward)",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
