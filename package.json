@@ -4,6 +4,9 @@
   "description": "Calculator Module for JS",
   "main": "dist/calc.bundle.js",
   "unpkg": "dist/calc.bundle.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jasmine",
     "examples": "node examples.js",
