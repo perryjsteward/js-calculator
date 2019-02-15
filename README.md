@@ -7,7 +7,7 @@ A lightweight javascript library for parsing calculations as an example for the 
 
 In a browser using CDN:
 ```html
-<script src="https://unpkg.com/@perreh/js-calculator@1.0.5/dist/calc.bundle.js"></script>
+<script src="https://unpkg.com/@perreh/js-calculator@1.0.6/dist/calc.bundle.js"></script>
 
 <script>
     calc(3).add(5); //returns 8
