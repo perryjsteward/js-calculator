@@ -76,10 +76,6 @@ const calc = (() => {
 
   // Calcs constructor
   function Calculator(initValue) {
-    this.initialValue;
-    this.nextValue;
-    this.method;
-    this.result;
     setInitialValue.call(this, initValue);
   }
 
